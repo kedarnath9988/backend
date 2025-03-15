@@ -12,7 +12,7 @@ pipeline{
                 stage('install dependencies'){
                     steps {
                         sh """
-                     npm install -y 
+                     npm install 
                         """
                     }
                 }
