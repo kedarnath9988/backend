@@ -1,6 +1,6 @@
 pipeline{
         agent {
-            label 'backend-01'
+            label 'node-01'
         }
         options {
             timeout(time:30, unit:'MINUTES')
@@ -14,7 +14,7 @@ pipeline{
                         sh """
                         npm install 
                         ls -ltr
-                        
+
                         """
                     }
                 }
