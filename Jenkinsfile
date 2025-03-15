@@ -8,14 +8,7 @@ pipeline{
             ansiColor('xterm')
         }
         stages {
-                stage('init'){
-                    steps{
-                        sh """
-                        
-                        
-                        """
-                    }
-                }
+                
                 stage('install dependencies'){
                     steps {
                         sh """
