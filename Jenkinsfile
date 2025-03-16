@@ -13,7 +13,7 @@ pipeline{
                     steps {
                         sh """
                        
-                    ls -ltr
+                    npm install
 
                         """
                     }
