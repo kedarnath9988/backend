@@ -41,7 +41,7 @@ pipeline{
                 stage('create zip-file'){
                     steps{
                         sh """
-                           echo this is create zip-file
+                            zip backend-${application_version} * -x Jenkinsfile -x  backend-${application_version}
                        """
                     }       
             }
@@ -51,7 +51,7 @@ pipeline{
         post {
             always {
                 echo 'i will run laways '
-                
+                deleteDir()
             }
             success {
                 echo 'pipeline is successfull'
