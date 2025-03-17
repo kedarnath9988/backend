@@ -34,6 +34,7 @@ pipeline{
                         sh """
                         npm install 
                         ls -ltr 
+                        echo " current version is : $application_version"
                         """
                     }
                 }
