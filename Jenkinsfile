@@ -42,6 +42,7 @@ pipeline{
                     steps{
                         sh """
                             zip -r -q backend-${application_version} * -x Jenkinsfile -x  backend-${application_version}
+                            ls -ltr 
                        """
                     }       
             }
@@ -51,6 +52,7 @@ pipeline{
         post {
             always {
                 echo 'i will run laways '
+                deleteDir()
                 
             }
             success {
