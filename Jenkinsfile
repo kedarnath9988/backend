@@ -51,7 +51,7 @@ pipeline{
         post {
             always {
                 echo 'i will run laways '
-                deleteDir()
+                
             }
             success {
                 echo 'pipeline is successfull'
