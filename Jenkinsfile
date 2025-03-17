@@ -38,11 +38,10 @@ pipeline{
                         """
                     }
                 }
-                stage('create zip-file '){
+                stage('create zip-file'){
                     steps{
                         sh """
-                            echo this is reate zip-file
-                            
+                           echo this is create zip-file
                        """
                     }       
             }
@@ -52,7 +51,7 @@ pipeline{
         post {
             always {
                 echo 'i will run laways '
-               
+                deleteDir()
             }
             success {
                 echo 'pipeline is successfull'
