@@ -9,7 +9,7 @@ pipeline{
         }
 
         environment{
-        def application_version = ' '
+        def application_version = ''
         }
         stages {
 
@@ -38,10 +38,10 @@ pipeline{
                         """
                     }
                 }
-                stage('create zip-file'){
+                stage('build'){
                     steps{
                         sh """
-                            zip backend-${application_version} * -x Jenkinsfile -x  backend-${application_version}
+                            zip -r   backend-${application_version} * -x Jenkinsfile -x  backend-${application_version}
                        """
                     }       
             }
@@ -51,7 +51,7 @@ pipeline{
         post {
             always {
                 echo 'i will run laways '
-                deleteDir()
+                
             }
             success {
                 echo 'pipeline is successfull'
